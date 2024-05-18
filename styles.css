@@ -264,3 +264,57 @@ a {
 ::-webkit-scrollbar-thumb:hover {
     background: #ccc; /* Change color on hover */
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        position: fixed; /* Ensure navbar stays fixed at the top */
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        z-index: 999;
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar li {
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px; /* Decrease font size for smaller screens */
+        transition: color 0.3s ease;
+        opacity: 0.8;
+    }
+
+    .navbar a:hover {
+        color: black;
+    }
+
+    .container {
+        margin-top: 70px; /* Adjust margin-top to create space below the fixed navbar */
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust headline size for smaller screens */
+    }
+
+    .client-login-button {
+        display: none; /* Hide the button */
+        pointer-events: none; /* Make it unclickable */
+    }
+}
