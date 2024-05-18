@@ -262,13 +262,16 @@ a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #ccc; /* Change color on hover */
+    background: #ffffff; /* Change color on hover */
 }
 
+/* Add media query for smaller screens (e.g., smartphones) */
 @media only screen and (max-width: 768px) {
     body {
-        margin: 0;
+        margin-left: 2%;
+        margin-right: 2%;
         padding: 0;
+        font-size: smaller;
     }
 
     .navbar {
@@ -277,7 +280,7 @@ a {
         width: 100%;
         background-color: transparent;
         z-index: 999;
-        padding: 10px 0; /* Adjust padding for smaller screens */
+        padding: 22px 0; /* Adjust padding for smaller screens */
     }
 
     .navbar ul {
@@ -311,6 +314,7 @@ a {
 
     h1 {
         font-size: 2em; /* Adjust headline size for smaller screens */
+        margin-top: 25%;
     }
 
     .client-login-button {
