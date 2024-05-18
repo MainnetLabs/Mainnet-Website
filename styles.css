@@ -1,0 +1,266 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20vh; /* Adjust this value for vertical positioning */
+}
+
+h1 {
+    font-size: 2.5em; /* Adjust this value for headline size */
+}
+
+.navbar {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center the items horizontally */
+}
+
+.navbar li {
+    padding: 25px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px; /* Adjust font size */
+    transition: color 0.3s ease;
+    opacity: 0.8;
+}
+
+.navbar a:hover {
+    color: black; /* Change color on hover */
+}
+
+.first-hr {
+    margin: 0 1.7%; /* Adjust margin to keep it away from screen edges */
+    height: 4px;
+    border: none; /* Remove the default border */
+    background-color: white; /* Example color */
+}
+
+h2 {
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    color: white; /* Example color */
+}
+
+h3 {
+    color: white; /* Example color */
+    font-weight: lighter; /* Adjust the font weight to make it less bold */
+}
+
+.release-text {
+    font-weight: lighter; /* Adjust the font weight to make it less bold */
+    color: white; /* Example color */
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    opacity: 0.7;
+    font-size: 1.1em;
+}
+
+.release-text:hover {
+    font-weight: lighter; /* Adjust the font weight to make it less bold */
+    color: white; /* Example color */
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    opacity: 1;
+}
+
+.release-hr {
+    margin: 0 1.7%;
+}
+
+.zoomed-out {
+    font-size: 0.9em
+}
+
+.rights {
+    opacity: 0.5;
+}
+
+.about-p {
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    margin-right: 1.7%; /* Match the margin of hr */
+}
+
+.about-contact {
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    font-weight: lighter; /* Adjust the font weight to make it less bold */
+    color: white; /* Example color */
+    opacity: 0.7;
+    font-size: 1.1em;
+}
+
+.about-titles {
+    text-align: left; /* Align the h3 to the right */
+    margin-left: 1.7%; /* Match the margin of hr */
+    margin-top: 2%; /* Match the margin of hr */
+    color: white; /* Example color */
+}
+
+/* Initial state */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px); /* Slightly move elements down */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Final state after page load */
+:root {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.95; }
+    to { opacity: 1; }
+}
+
+.fade-in-element {
+    animation: fadeInElement 1s forwards;
+}
+
+@keyframes fadeInElement {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply delay to stagger the animations */
+.fade-in-element:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.fade-in-element:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.logo {
+    position: fixed;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 5%;
+}
+
+.client-login-button {
+    z-index: 99999;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.client-login-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #000000;
+}
+
+.login-form label {
+    align-self: flex-start;
+    margin: 10px 0 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.login-form button {
+    margin-top: 5%;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+::selection {
+  background: #000000; /* Background color for highlighted text */
+  color: #ffffff; /* Text color for highlighted text */
+}
+
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Set transparent background */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: white; /* Set color of the scrollbar handle */
+    border-radius: 10px; /* Set rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ccc; /* Change color on hover */
+}
