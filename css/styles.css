@@ -4,6 +4,10 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.margin {
+    margin-left: 1.7%;
+}
+
 .container {
     text-align: center;
     margin-top: 20vh;
