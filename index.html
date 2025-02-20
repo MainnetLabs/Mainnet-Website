@@ -31,5 +31,25 @@
             <p class="rights">Copyright &copy; 2025 Absawy, Inc. and all affiliated companies. All Rights Reserved.</p>
         </center>
     </footer>
+    <script>
+        function createStar() {
+        const star = document.createElement("div");
+        star.classList.add("star");
+
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+
+        star.style.left = `${x}px`;
+        star.style.top = `${y}px`;
+
+        document.body.appendChild(star);
+
+        setTimeout(() => {
+            star.remove();
+        }, 2000);
+    }
+
+    setInterval(createStar, 700);
+    </script>
 </body>
 </html>
